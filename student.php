@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 function calculateAverage($grades) {
     return array_sum($grades) / count($grades);
 }
@@ -36,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
     <h1>Student Grade Result</h1>
     <table>
         <thead>
@@ -59,8 +62,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </tr>
         </tbody>
     </table>
-
     <br>
     <a href="index.php">← Enter Another Student</a>
+</div>
 </body>
 </html>
